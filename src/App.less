@@ -1,0 +1,237 @@
+@height:160px;
+@bg:#00B0F0;
+@lh:32px;
+body,ul,li{
+    margin: 0;
+}
+    @media (min-width: 834px) {
+    #root {
+        font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        margin: 0 auto;
+        width: 80%;
+        header {
+            background: #eee;
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            .header-container{
+                width: 80%;
+                height: @height;
+                background: @bg;
+                    padding: 20px;
+                box-sizing: border-box;
+                position: relative;
+                color: white;
+                
+                font-size: 28px;
+            
+                .radius{
+                    width: @height;
+                    height: @height;
+                    border-radius: 100%;
+                    background: @bg;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    margin-right: -80px;
+                }
+                .name{
+                    display: flex;
+                    align-items: center;
+                    font-weight: bold;
+                    .engineer{
+                        font-size: 18px;
+                        margin-left: 50px;
+                        font-weight: 400;
+                    }
+                }
+                .infomation{
+                    display: flex;
+                    flex-wrap: wrap;
+                    // flex-direction: column;
+                    .label{
+                        margin-top: 20px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 16px;
+                        width: 50%;
+                        .label-key{
+                            padding-left: 5px;
+                        }
+                        .label-value{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        
+        }
+        .resume-content{
+            color: white;
+            width: 100%;
+            padding:20px;
+            display: flex;
+            box-sizing: border-box;
+            .content-left{
+                width: 20%;
+                background: @bg;
+                line-height: @lh;
+                height: @lh;
+                border-radius: @lh;
+            }
+            .content-right{
+                width: 80%;
+                color: #666;
+                ul li{
+                   
+                    color: @bg;
+                    margin-top: 8px;
+                    .text{
+                        font-size: 15px;
+                        color: #666;
+                    }
+                    .weight{
+                        font-weight: bold;
+                    }
+                    
+                }
+                .level-ul{
+                    margin-left: 20px;
+                    .level3{
+                        list-style-type: decimal;
+                        font-size: 15px;
+                        color: #666;
+                    }
+                }
+              
+                .title{
+                    line-height: @lh;
+                    display: flex;
+                    margin-left: 20px;
+                    color: @bg;
+                    >span{
+                        margin-right: 20px;
+                        font-weight: bold   ;
+                    }
+                }
+               
+                .descript{
+                    line-height: 26px;
+                    margin-left: 20px;
+                    margin-bottom: 8px;
+                    >span{
+                        
+                        font-weight: bold ;
+                    }
+                }
+            }
+        }
+    }
+
+    }
+@media (min-width: 0px) and (max-width: 834px) {
+    #root {
+        font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        margin: 0 auto;
+        width: 100%;
+        header {
+            background: #eee;
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            
+            .header-container{
+                width: 100%;
+                background: @bg;
+                border-radius: 4px;
+                    padding: 20px;
+                box-sizing: border-box;
+                position: relative;
+                color: white;
+                
+                font-size: 28px;
+               
+                .radius{
+                    display: none;
+                    width: @height;
+                    height: @height;
+                    border-radius: 100%;
+                    background: @bg;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    margin-right: -80px;
+                }
+                .name{
+                    display: flex;
+                    align-items: center;
+                    font-weight: bold;
+                    .engineer{
+                        font-size: 18px;
+                        margin-left: 20px;
+                        font-weight: 400;
+                    }
+                }
+                .infomation{
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    .label{
+                        margin-top: 20px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 16px;
+                        .label-key{
+                            padding-left: 5px;
+                        }
+                        .label-value{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+           
+        }
+        section{
+            // width: 100%;
+            padding:20px;
+        }
+    }
+   }
+
+.logo {
+    height: 6em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
+}
